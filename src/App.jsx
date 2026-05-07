@@ -21,6 +21,8 @@ import {
   doc, 
   serverTimestamp 
 } from "firebase/firestore";
+import { logosadaya } from "./sadaya-logo-v3.jpeg";
+import { logokabinet } from "kabinet-logo-v3.jpeg";
 
 // ==========================================
 // KONFIGURASI FIREBASE
@@ -176,10 +178,10 @@ function AuthScreen({ onSuccess }) {
           <div className="relative z-10 flex flex-col items-center text-center">
             <div className="flex gap-8 mb-10">
               <div className="w-[120px] h-[120px] bg-white rounded-full p-2 shadow-2xl border-4 border-[#CFA96F] overflow-hidden transform transition-all duration-500 hover:scale-110 hover:rotate-3">
-                <img src="https://res.cloudinary.com/dpcnjavbt/image/upload/q_auto/f_auto/v1778137492/Sadaya-Logo.jpg_qrrfph.jpg" alt="Logo SADAYA" className="w-full h-full object-cover rounded-full bg-white" onError={(e)=>{e.target.onerror = null; e.target.src="[https://placehold.co/200x200/ECE1C9/8D5B30?text=S](https://placehold.co/200x200/ECE1C9/8D5B30?text=S)"}} />
+                <img src={logosadaya} alt="Logo SADAYA" className="w-full h-full object-cover rounded-full bg-white" onError={(e)=>{e.target.onerror = null; e.target.src="[https://placehold.co/200x200/ECE1C9/8D5B30?text=S](https://placehold.co/200x200/ECE1C9/8D5B30?text=S)"}} />
               </div>
               <div className="w-[120px] h-[120px] bg-white rounded-full p-2 shadow-2xl border-4 border-[#CFA96F] overflow-hidden transform transition-all duration-500 hover:scale-110 hover:-rotate-3">
-                <img src="https://res.cloudinary.com/dpcnjavbt/image/upload/q_auto/f_auto/v1778137492/kabinet-logo.jpg_rxile1.jpg" alt="Logo Kabinet" className="w-full h-full object-contain rounded-full bg-white" onError={(e)=>{e.target.onerror = null; e.target.src="[https://placehold.co/200x200/ECE1C9/8D5B30?text=K](https://placehold.co/200x200/ECE1C9/8D5B30?text=K)"}} />
+                <img src={logokabinet} alt="Logo Kabinet" className="w-full h-full object-contain rounded-full bg-white" onError={(e)=>{e.target.onerror = null; e.target.src="[https://placehold.co/200x200/ECE1C9/8D5B30?text=K](https://placehold.co/200x200/ECE1C9/8D5B30?text=K)"}} />
               </div>
             </div>
             <h1 className="text-7xl font-black mb-4 tracking-[0.15em] drop-shadow-lg text-white">SADAYA</h1>
